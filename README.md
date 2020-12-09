@@ -1,7 +1,7 @@
 <h1>&spades; &hearts; &diams; &hearts; Blackjack: Play the Numbers! &spades; &hearts; &diams; &hearts; </h1>
 <hr>
 <p><a href="http://www.github.com/joshshterenberg">Joshua Shterenberg</a>, 
-  <a href="http://www.github.com/jsad2023">Justin Sadler</a>, <a href="http://www.github.com/pvganesh">Prithika Ganesh</a>, 
+  <a href="http://www.github.com/jsad2023">Justin Sadler</a>, <a href="http://www.github.com/prithi15">Prithika Ganesh</a>, 
   <a href="http://www.github.com/MJumbrella">Tao Zhang</a></p>
 
 <p><strong><a href="#">Demo Video</a></strong></p>
@@ -32,4 +32,3 @@ so that, when a user flips the switch indicating that they want to "stay", the m
 not revert back to its previous state after this action. Another LFSR module that we were
 using, mostly for development purposes, is a little more involved, including a MUX and 
 DFlipFlop as foundational modules. All other files included were used for debugging. </p>
-
