@@ -58,12 +58,12 @@ module ten_second_timer(
     reg get_new_num;
     initial begin 
         load = 0; 
-        seeds[0] = seed%2; seeds[1] = seed/4; seeds[2] = seed%5; seeds[3] = (seed%12)-1; seeds[4] = seed/3; seeds[5] = seed%29;
+        seeds[0] = seed%2; seeds[1] = seed/4; seeds[2] = seed%5; seeds[3] = (seed%12)-1; seeds[4] = seed/3; seeds[5] = seed%19;
         load = 1;
     end 
     always @(posedge get_new_num) load = 0;
-    LFSR lfsr[5:0] (get_new_num, reset, {seed[0], seed[1], seed[2], seed[3], seed[4], seed[5]}, load, randyboy);
-    LFSR lfsr2[5:0] (get_new_num, reset, {seed[0], seed[1], seed[2], seed[3], seed[4], seed[5]}, load, randygirl);
+    //LFSR lfsr[5:0] (get_new_num, reset, {seed[0], seed[1], seed[2], seed[3], seed[4], seed[5]}, load, randyboy);
+    //LFSR lfsr2[5:0] (get_new_num, reset, {seed[0], seed[1], seed[2], seed[3], seed[4], seed[5]}, load, randygirl);
     
     wire [3:0] alltotals[0:19];
     wire [3:0]total;
@@ -71,7 +71,7 @@ module ten_second_timer(
     reg start = 0;
     reg stop = 0;//(t<20)?0:1;
     always @(posedge clock_100Mhz) start = 1;
-    fibonacci_lfsr2 L1(clock_100Mhz, stop, start, total);
+    fibonacci_lfsr2 L1(clock_100Mhz, seed, start, total);
     generate
         for (t = 0; t < 20; t = t + 1) begin
             assign alltotals[t] = ((total%10)+1);
@@ -85,15 +85,15 @@ module ten_second_timer(
             for (i = 0; i < 52; i = i + 1) begin
                 cards[i] = i;
             end            
-            for (i = 0; i < 300; i = i + 1) begin
-                get_new_num = 1;
-                get_new_num = 0;
-                b = (randyboy>51)?51:(randyboy);
-                g = (randygirl>51)?51:randygirl;
-                temp = cards[b];
-                cards[b] = cards[g];
-                cards[g] = temp;
-            end
+//            for (i = 0; i < 300; i = i + 1) begin
+//                get_new_num = 1;
+//                get_new_num = 0;
+//                b = (randyboy>51)?51:(randyboy);
+//                g = (randygirl>51)?51:randygirl;
+//                temp = cards[b];
+//                cards[b] = cards[g];
+//                cards[g] = temp;
+//            end
             j = 0;
             //assigning initial cards for player and dealer
             playercards[0] = alltotals[j];
@@ -238,29 +238,21 @@ module ten_second_timer(
 endmodule
 
 module fibonacci_lfsr2(
-      input  clk, stop,
+      input  clk, [5:0]seedz,
       input  rst_n,
       output [3:0] data
     );
-    reg lastclock, currentclock;
-    always @(*) begin
-        if (stop) begin
-            currentclock = lastclock;
-        end else begin
-            lastclock = currentclock;
-        end
-    end
     wire feedback = data[3] ^ data[1] ;
-    reg [3:0] out1, out2;
-    always @(posedge currentclock)
+    reg [3:0] out1 = 0 , out2 = 0;
+    always @(posedge clk)
       if (~rst_n) 
         out1 <= 3'hf;
       else
         out1 <= {out1[2:0], feedback} ;
-    always @(negedge currentclock)
+    always @(negedge clk)
       if (~rst_n) 
         out2 <= 3'hf;
       else
         out2 <= {out2[2:0], feedback} ;
-    assign data = out1 | out2;
+    assign data = (out1 | out2 != 0)?(out1 | out2):seedz[5:2];
 endmodule
