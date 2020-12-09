@@ -6,19 +6,19 @@
 
 <h4><em><a href="https://drive.google.com/file/d/1p0nIO-1mr5KoCaxjfPyjTwt6cmd2B4R3/view?usp=sharing">Demo Video</a></em></h4>
 <h4><a href="https://www.google.com"><em>Presentation Video</em></a></h4>
-
+<hr>
 <p>Welcome to our BU ENG EC311 project repository! This project is a simultaneous gameplay
 device and statistical analysis tool for the common casino game: Blackjack. This project
 lets the user play the Blackjack game (with a slight modification) and dive into the theory
 behind play at the same time, using an Artix-7 FPGA, a 7-segment display and a VGA-connected
 display. </p>
-<hr>
+
 <p>To run the project, please download all the files in the Sources and Constraints folders,
 and then Synthesize and Implement the code using the Vivado software, generate the associated
 Bitstream, and upload it to your FPGA. Be sure to create a new Vivado project and then 
 implement the corresponding code as files into the project, not create a project amongst
 the files, as file locations will not be straightforward, as Vivado assumes it to be.</p>
-<hr>
+
 <p>The architecture of the code is relatively straightforward: the master file is the foundation
 for the two modes of the system, labeled as "ten_second_timer" and "vga_top" in our code.
 These two host the main components of their respective modes; ten_second_timer runs the 
