@@ -1,4 +1,4 @@
-Blackjack: Play the Numbers!
+<strong>Blackjack: Play the Numbers!</strong>
 
 Joshua Shterenberg, Justin Sadler, Prithika Ganesh, Tao Zhang
 
