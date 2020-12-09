@@ -4,7 +4,7 @@
   <a href="http://www.github.com/jsad2023">Justin Sadler</a>, <a href="http://www.github.com/prithi15">Prithika Ganesh</a>, 
   <a href="http://www.github.com/MJumbrella">Tao Zhang</a></p>
 
-<p><strong><a href="#">Demo Video</a></strong></p>
+<p><strong><a href="https://drive.google.com/file/d/1p0nIO-1mr5KoCaxjfPyjTwt6cmd2B4R3/view?usp=sharing">Demo Video</a></strong></p>
 
 <p>Welcome to our BU ENG EC311 project repository! This project is a simultaneous gameplay
 device and statistical analysis tool for the common casino game: Blackjack. This project
