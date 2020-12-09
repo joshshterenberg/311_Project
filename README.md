@@ -5,7 +5,7 @@
   <a href="http://www.github.com/MJumbrella">Tao Zhang</a></h3>
 
 <h4><em><a href="https://drive.google.com/file/d/1p0nIO-1mr5KoCaxjfPyjTwt6cmd2B4R3/view?usp=sharing">Demo Video</a></em></h4>
-<h4><a href="https://www.google.com"><em>Presentation Video</em></a></h4>
+<h4><a href="https://drive.google.com/file/d/1JnkjcjIOc2KIkPpnJ3-4ys1r2bsDZ5S-/view?usp=sharing"><em>Presentation Video</em></a></h4>
 <hr>
 <p>Welcome to our BU ENG EC311 project repository! This project is a simultaneous gameplay
 device and statistical analysis tool for the common casino game: Blackjack. This project
