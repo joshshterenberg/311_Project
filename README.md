@@ -1,10 +1,11 @@
 <h1>&spades; &hearts; &diams; &hearts; Blackjack: Play the Numbers! &spades; &hearts; &diams; &hearts; </h1>
 <hr>
-<p><a href="http://www.github.com/joshshterenberg">Joshua Shterenberg</a>, 
+<h3>By <a href="http://www.github.com/joshshterenberg">Joshua Shterenberg</a>, 
   <a href="http://www.github.com/jsad2023">Justin Sadler</a>, <a href="http://www.github.com/prithi15">Prithika Ganesh</a>, 
-  <a href="http://www.github.com/MJumbrella">Tao Zhang</a></p>
+  <a href="http://www.github.com/MJumbrella">Tao Zhang</a></h3>
 
-<p><strong><a href="https://drive.google.com/file/d/1p0nIO-1mr5KoCaxjfPyjTwt6cmd2B4R3/view?usp=sharing">Demo Video</a></strong></p>
+<h4><em><a href="https://drive.google.com/file/d/1p0nIO-1mr5KoCaxjfPyjTwt6cmd2B4R3/view?usp=sharing">Demo Video</a></em></h4>
+<h4><a href="https://www.google.com"><em>Presentation Video</em></a></h4>
 
 <p>Welcome to our BU ENG EC311 project repository! This project is a simultaneous gameplay
 device and statistical analysis tool for the common casino game: Blackjack. This project
